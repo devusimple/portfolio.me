@@ -1,4 +1,4 @@
-import { Dispatch, FormEvent, SetStateAction, useEffect } from "react";
+import { Dispatch, FormEvent, SetStateAction, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -9,13 +9,46 @@ const Contact = ({
 }: {
   setActiveSection: Dispatch<SetStateAction<string>>;
 }) => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+ const [info, setInfo] = useState("")
   useEffect(() => {
     setActiveSection("contact");
   }, [setActiveSection]);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission
+
+    try {
+      const res = await fetch("https://foody.pockethost.io/api/collections/portfolio_messages/records", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        // Handle successful response
+        console.log("Message sent successfully!");
+        setInfo("Message sent successfully!");
+      } else {
+        // Handle error response
+        console.error("Failed to send message.");
+        setInfo("Failed to send message.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      setInfo("Error", error);
+    }
   };
 
   return (
@@ -49,6 +82,8 @@ const Contact = ({
               name="name"
               required
               className="w-full"
+              value={formData.name}
+              onChange={handleInputChange}
             />
           </div>
           <div className="mb-4">
@@ -64,6 +99,8 @@ const Contact = ({
               name="email"
               required
               className="w-full"
+              value={formData.email}
+              onChange={handleInputChange}
             />
           </div>
           <div className="mb-4">
@@ -78,6 +115,8 @@ const Contact = ({
               name="message"
               required
               className="w-full h-32"
+              value={formData.message}
+              onChange={handleInputChange}
             />
           </div>
           <Button type="submit" className="w-full">
@@ -85,6 +124,7 @@ const Contact = ({
           </Button>
         </motion.form>
       </div>
+      <p>{info}</p>
     </section>
   );
 };
