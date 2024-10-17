@@ -7,7 +7,7 @@ const blogPosts = [
     id: 1,
     title: "Getting Started with React Hooks",
     image:
-      "https://foody.pockethost.io/api/files/nnb4l69cgch6tpm/m7yycpfb66e21pu/r_1_z3vd932aOw.png",
+      "https://foody.pockethost.io/api/files/nnb4l69cgch6tpm/vxfwti35mkrpad0/getting_started_with_react_hooks_GlATY54XSx.jpg",
     date: "May 15, 2023",
     excerpt:
       "Learn how to use React Hooks to simplify your components and manage state effectively.",
@@ -16,7 +16,7 @@ const blogPosts = [
     id: 2,
     title: "Building Scalable Node.js Applications",
     image:
-      "https://foody.pockethost.io/api/files/nnb4l69cgch6tpm/m7yycpfb66e21pu/r_1_z3vd932aOw.png",
+      "https://foody.pockethost.io/api/files/nnb4l69cgch6tpm/t0y3ap06kn2nxh1/screenshot_2023_09_29_at_9_38_FbowJR6Uz2.16-AM.png",
     date: "June 2, 2023",
     excerpt:
       "Discover best practices for building scalable and maintainable Node.js applications.",
@@ -25,7 +25,7 @@ const blogPosts = [
     id: 3,
     title: "Introduction to GraphQL",
     image:
-      "https://foody.pockethost.io/api/files/nnb4l69cgch6tpm/m7yycpfb66e21pu/r_1_z3vd932aOw.png",
+      "https://foody.pockethost.io/api/files/nnb4l69cgch6tpm/loqeonzk4zkuj19/r_3_JVLDKQlcFM.jpeg",
     date: "June 20, 2023",
     excerpt:
       "Explore the benefits of GraphQL and how it can improve your API development process.",
