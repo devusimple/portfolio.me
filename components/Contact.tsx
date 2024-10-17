@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 
 const Contact = ({
   setActiveSection,
@@ -124,7 +125,15 @@ const Contact = ({
           </Button>
         </motion.form>
       </div>
-      <p>{info}</p>
+      {
+        info !== "" &&(
+    <Alert>
+      <AlertTitle>Message</AlertTitle>
+      <AlertDescription>
+        {info}
+     </AlertDescription>
+    </Alert>
+    )}
     </section>
   );
 };
