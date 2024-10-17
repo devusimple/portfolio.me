@@ -1,5 +1,5 @@
 "use client";
-import About from "@/components/About";
+//import About from "@/components/About";
 import Blog from "@/components/Blog";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -18,7 +18,7 @@ export default function Home() {
       {/* <Navbar activeSection={activeSection} /> */}
       <main>
         <Hero setActiveSection={setActiveSection} />
-        <About setActiveSection={setActiveSection} />
+        {/* <About setActiveSection={setActiveSection} /> */}
         <Skills setActiveSection={setActiveSection} />
         <Projects setActiveSection={setActiveSection} />
         <Blog setActiveSection={setActiveSection} />
