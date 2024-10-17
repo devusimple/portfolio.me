@@ -64,7 +64,7 @@ const Navbar = ({ activeSection }: { activeSection: string }) => {
             {open && (
       <div className="bg-white p-6 w-full">
         
-        <ul className=" gap-3 md:hidden space-x-6">
+        <ul className="md:hidden space-y-3">
           {[
             "Home",
             "About",
