@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Navbar = ({ activeSection }: { activeSection: string }) => {
   const [isSticky, setIsSticky] = useState(false);
-  
+    const [open, setOpen] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
       setIsSticky(window.scrollY > 0);
@@ -44,7 +44,7 @@ const Navbar = ({ activeSection }: { activeSection: string }) => {
             </li>
           ))}
         </ul>
-        <button className="md:hidden">
+        <button className="md:hidden" onClick={()=> setOpen(!open)}>
           <svg
             className="w-6 h-6"
             fill="none"
@@ -61,6 +61,30 @@ const Navbar = ({ activeSection }: { activeSection: string }) => {
           </svg>
         </button>
       </div>
+            {open && (
+        <ul className="flex flex-col items-center gap-3 md:hidden space-x-6">
+          {[
+            "Home",
+            "About",
+            "Skills",
+            "Projects",
+            "Blog",
+            "Testimonials",
+            "Contact",
+          ].map((item) => (
+            <li key={item}>
+              <Link
+                href={`#${item.toLowerCase()}`}
+                className={`text-gray-600 hover:text-blue-600 ${
+                  activeSection === item.toLowerCase() ? "font-bold" : ""
+                }`}
+              >
+                {item}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
     </nav>
   );
 };
