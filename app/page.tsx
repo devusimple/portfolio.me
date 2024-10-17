@@ -12,9 +12,10 @@ import { useState } from "react";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("home");
+  console.log(activeSection)
   return (
     <div className="bg-gray-100 min-h-screen">
-      <Navbar activeSection={activeSection} />
+      {/* <Navbar activeSection={activeSection} /> */}
       <main>
         <Hero setActiveSection={setActiveSection} />
         <About setActiveSection={setActiveSection} />
