@@ -21,11 +21,11 @@ const About = ({
           transition={{ duration: 0.5 }}
         >
           <Image
-            src="https://foody.pockethost.io/api/files/nnb4l69cgch6tpm/m7yycpfb66e21pu/r_1_z3vd932aOw.png"
+            src="https://foody.pockethost.io/api/files/nnb4l69cgch6tpm/jnkx466aqth7c1i/photoroom_20241002_173803_TCop5SdBys.png"
             alt="Profile Picture"
             width={300}
             height={300}
-            className="rounded-full shadow-lg"
+            className="rounded-full shadow-lg object-cover"
             placeholder="blur"
             loading="lazy"
           />
