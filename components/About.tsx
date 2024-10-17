@@ -23,8 +23,8 @@ const About = ({
           <Image
             src="https://foody.pockethost.io/api/files/nnb4l69cgch6tpm/m7yycpfb66e21pu/r_1_z3vd932aOw.png"
             alt="Profile Picture"
-            width={400}
-            height={400}
+            width={300}
+            height={300}
             className="rounded-full shadow-lg"
             placeholder="blur"
             loading="lazy"
