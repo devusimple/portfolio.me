@@ -7,7 +7,7 @@ const projects = [
     id: 1,
     title: "E-commerce Platform",
     image:
-      "https://foody.pockethost.io/api/files/nnb4l69cgch6tpm/m7yycpfb66e21pu/r_1_z3vd932aOw.png",
+      "https://foody.pockethost.io/api/files/nnb4l69cgch6tpm/fjdcbjuje473sd8/r_1_CIBfVcnQAf.jpeg",
     description:
       "A full-stack e-commerce solution built with React and Node.js",
   },
@@ -23,7 +23,7 @@ const projects = [
     id: 3,
     title: "Weather Forecast App",
     image:
-      "https://foody.pockethost.io/api/files/nnb4l69cgch6tpm/m7yycpfb66e21pu/r_1_z3vd932aOw.png",
+      "https://foody.pockethost.io/api/files/nnb4l69cgch6tpm/jatye9aof2uddbf/oip_7vvzE3i9lk.jpeg",
     description: "A weather forecast application integrating multiple APIs",
   },
 ];
